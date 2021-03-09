@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teklif Al</title>
+    <script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="/java.js"></script>
+    <link href="stylex.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" rel="stylesheet">
+
+ <script>
+			function deneme() {
+            
+            s1= parseInt(document.getElementById('yuk').value);
+            s2= parseInt(document.getElementById('en').value);
+            s3= parseInt(document.getElementById('boy').value);
+			s4= parseInt(document.getElementById('agr').value);
+            var cboxes = document.getElementById('paketx');
+            checked = (cboxes.checked?'1':'0');
+            if(checked==1)
+            {
+			var ilkdeger = s1*s2*s3/5000;
+			     if(ilkdeger>s4){
+				 document.getElementById('son').value = s1*s2*s3*35/50000;
+                 return 'son';
+				 }
+			     else{
+				 document.getElementById('son').value = s4*35/10;
+				 }
+            }
+            else
+            {	
+				document.getElementById('son').value = s1*s2*s3/100000*35;
+            return 'son';
+
+          };
+        };
+        
+    </script>
+    <script>
+	function sil(){
+    
+    document.getElementById('agr').value="";
+	document.getElementById('en').value="";
+	document.getElementById('boy').value="";
+	document.getElementById('yuk').value="";
+	document.getElementById('son').value="";
+    
+    
+    }
+    function checkbox2(){
+    
+    document.getElementById('agr').style.display="none";
+    
+    
+    }
+	function checkbox1(){
+    
+    document.getElementById('agr').style.display="block";
+    
+    
+    }
+	function ikinci(){
+    
+    document.getElementById('container1').style.display="block";
+    document.getElementById('container2').style.display="none";
+    document.getElementById('container3').style.display="none";
+    
+    }
+    function birinci(){
+       
+    document.getElementById('container1').style.display="none";
+    document.getElementById('container2').style.display="block";
+    document.getElementById('container3').style.display="none";
+       
+    }
+    function ucuncu(){
+    
+    document.getElementById('container1').style.display="none";
+    document.getElementById('container2').style.display="none";
+    document.getElementById('container3').style.display="block";
+    
+    }
+	
+    function yazdir(){
+       
+        document.getElementById("sonx").innerHTML = deneme();
+          
+    }
+    </script>
+<body>
+    <div id="container1">
+        <div class="row justify-content-center">
+            <div class="col-md-9">
+                <div class="card text-center justify-content-center shaodw-lg card-1 border-0 bg-white px-sm-2">
+                    <div class="card-body show ">
+                        <div class="row">
+                            <div class="col">
+                                <h5><b>Yeni Yük</b></h5>
+                                <p> turkeyavrupakargo.com<span class=" ml-1 cursor-pointer"> Oku</span> </p>
+                            </div>
+							
+                        </div>
+						
+                        <div class="radio-group row justify-content-between px-3 text-center a" id="genel" >
+						<div class="col-auto mr-sm-2 mx-1 card-block py-0 text-center radio  "  id="card2x">
+						 <div class="flex-row">
+                                    <div class="col">
+                                        <div class="pic" id="card1"> <img class="irc_mut img-fluid" src="c1.png" width="100" height="100"> </div>
+                                        <p>Koli-Paket</p>
+                                        <input name="paketx" id="paketx" type="radio" value="1" onclick="checkbox1()" checked>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto ml-sm-2 mx-1 card-block py-0 text-center radio "id="card1x">
+                                <div class="flex-row" >
+                                    <div class="col">
+                                        <div class="pic" id="card1"> <img class="irc_mut img-fluid" src="c3.png" width="100" height="100"> </div>
+                                        <p>Hacimli Büyük Eşyalar</p>
+                                        <input name="paketx" id="kolix" type="radio" value="1" onclick="checkbox2()">
+                                    </div>
+                                </div>
+                            </div>
+						
+                        </div>
+						
+						
+								
+						
+						<div class="col-auto"> <button type="button" class="btn btn-outline-secondary"> Türkiye <span class="mr-2"><i class="fa fa-angle-left" aria-hidden="true"></i></span> </button> </div>
+							<p >Hangi <b style="color:red">Ülkeye</b> Göndermek İstersiniz ?</p>
+							<form class="example">
+						   <label class="select-box">
+							 <select>
+							  <option>Seç</option>
+							  <option>Almanya</option>
+							  <option>Avusturya</option>
+							  <option>Belçika</option>
+							  <option>Fransa</option>
+							  <option>Hollanda</option>
+							  <option>İngiltere</option>
+							 </select>
+						  </label>
+						</form>
+						
+						
+						
+						
+                        <div class="row justify-content-center">
+                            <br class="col">
+                                
+                                <input type="text" class="ip4" placeholder="En (cm)" id="en" onfocus="this.value=''">
+                                <input type="text" class="ip4" placeholder="Boy (cm)" id="boy" onfocus="this.value=''"><br>
+								<input type="text" class="ip4" placeholder="Yukseklik (cm)" id="yuk" onfocus="this.value=''">
+								<input type="text" class="ip4" placeholder="Agirlik (KG)" id="agr" onfocus="this.value=''">
+								
+
+                          
+						
+                            
+                        
+                            </div>
+							<br>
+							  	<div class="col-auto"> <button type="button" class="btn btn-danger"  onclick="deneme();">Hesap <span class="ml-2"><i class="fa fa-angle-right" aria-hidden="true"></i></span> </button> </div><br>
+								<div class="col-auto"> <button type="button" class="btn btn-danger"  onclick="sil();">Sil <span class="ml-2"><i class="fa fa-angle-right" aria-hidden="true"></i></span> </button> </div><br>
+								<input type="text" class="ip5" placeholder="Kaç €" id="son"> <div class="pic"> <img class="irc_mut img-fluid" src="euro.png" width="50" height="50"> </div>
+                            <br>
+                        </div>
+                        <div class="row justify-content-between">
+                            <div class="col-auto"> <button type="button" class="btn btn-outline-secondary"> <span class="mr-2"><i class="fa fa-angle-left" aria-hidden="true"></i></span> </button> </div>
+                            <div class="col-auto"> <button type="button" class="btn btn-primary" onclick="ucuncu()" > İleri <span class="ml-2"><i class="fa fa-angle-right" aria-hidden="true"></i></span> </button> </div>
+                            
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+
+    <div id="container2">
+        <div class="row justify-content-center">
+            <div class="col-md-9">
+                <div class="card text-center justify-content-center shaodw-lg card-1 border-0 bg-white px-sm-2">
+                    <div class="card-body show ">
+                        <div class="row">
+                            <div class="col">
+                                <h5><b>Bölge</b></h5>
+                                <p> Yükünüzü hangi <b style="color:red">ülkeye</b> göndermek istersiniz  ? <span class=" ml-1 cursor-pointer"> Oku</span> </p>
+                            </div>
+                        </div>
+                        <div class="radio-group row justify-content-between px-3 text-center a">
+                            <div class="col-auto mr-sm-2 mx-1 card-block py-0 text-center radio  ">
+                                <div class="flex-row">
+                                    <!-- <div class="col">
+                                        <div class="pic"></div>
+                                     
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="col-auto ml-sm-2 mx-1 card-block py-0 text-center radio ">
+                                <div class="flex-row">
+                                    <!-- <div class="col">
+                                    <div class="pic">  </div>
+                                        
+                                      
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <br class="col">
+                            <div class="col-auto"> <button type="button" class="btn btn-outline-secondary"> Türkiye <span class="mr-2"><i class="fa fa-angle-left" aria-hidden="true"></i></span> </button> </div>
+
+                            <label for="cars">----></label>
+
+							 <form class="example">
+						   <label class="select-box">
+							 <select>
+							  <option>Seç</option>
+							  <option>Almanya</option>
+							  <option>Avusturya</option>
+							  <option>Belçika</option>
+							  <option>Fransa</option>
+							  <option>Hollanda</option>
+							  <option>İngiltere</option>
+							 </select>
+						  </label>
+						</form>
+													
+                        
+                            </div>
+                            <br>
+							<p style="color:red">Agirlik Giriniz. </p>
+                          
+
+                         
+                        </div>
+                        <div class="row justify-content-between">
+                            <div class="col-auto"> <button type="button" class="btn btn-outline-secondary" onclick="ikinci()"> <span class="mr-2"><i class="fa fa-angle-left" aria-hidden="true"></i></span> </button> </div>
+                            <div class="col-auto"> <button type="button" class="btn btn-primary"  onclick="ucuncu();">Hesap <span class="ml-2"><i class="fa fa-angle-right" aria-hidden="true"></i></span> </button> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="container3">
+        <div class="row justify-content-center">
+            <div class="col-md-9">
+                <div class="card text-center justify-content-center shaodw-lg card-1 border-0 bg-white px-sm-2">
+                    <div class="card-body show ">
+                        <div class="row">
+                            <div class="col">
+                                <h5><b>FİYAT AL</b></h5>
+                                <p> Ücret  <span class=" ml-1 cursor-pointer"> Oku</span> </p>
+                            </div>
+                        </div>
+                      
+                           
+
+
+								<div class="flex-row">
+                                    <div class="col">
+                                        <div class="pic"> <a href="https://web.whatsapp.com/send?phone=905323511984&text="><img class="irc_mut img-fluid" src="wa.png" width="100" height="100"></a> </div>
+                                        <p>Whatsapp :</p><a href="https://web.whatsapp.com/send?phone=905323511984&text=">05323511984</a>
+                                      
+                                    </div>
+                                </div>
+                           
+                          
+                                <div class="flex-row">
+                                    <div class="col">
+                                        <div class="pic"> <a href="tel:+905323511984"><img class="irc_mut img-fluid" src="mo.png" width="100" height="100"></a> </div>
+                                         <p>Direkt Ara :</p><a href="tel:+905323511984">05323511984</a>
+                                       
+                                    </div>
+                                </div>
+							
+                        </div>
+                        <div class="row justify-content-between">
+                            <div class="col-auto"> <button type="button" class="btn btn-outline-secondary" onclick="ikinci()"> <span class="mr-2"><i class="fa fa-angle-left" aria-hidden="true"></i></span> </button> </div>
+                            <div class="col-auto"> <button type="button" class="btn btn-primary"  onclick="deneme();">Hesap <span class="ml-2"><i class="fa fa-angle-right" aria-hidden="true"></i></span> </button> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+</body>
+</html>

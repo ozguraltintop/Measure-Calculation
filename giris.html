@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teklif Al</title>
+    <script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="/java.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" rel="stylesheet">
+
+    <script>
+        function deneme1() {
+            // var myVar = localStorage['deger'] || 'son';
+            var son = parseInt(sessionStorage.getItem("son"));
+           
+
+            document.getElementById('son').value = s5*100;
+            // s1= parseInt(document.getElementById('yuk').value);
+            // s2= parseInt(document.getElementById('en').value);
+            // s3= parseInt(document.getElementById('boy').value);
+            // var cboxes = document.getElementById('paketx');
+            // checked = (cboxes.checked?'1':'0');
+            // if(checked==1)
+            // {document.getElementById('son').value = s1*s2*s3/5000;}
+            // else
+            // {document.getElementById('son').value = s1*s2*s3/6000;};
+
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-9">
+                <div class="card text-center justify-content-center shaodw-lg card-1 border-0 bg-white px-sm-2">
+                    <div class="card-body show ">
+                        <div class="row">
+                            <div class="col">
+                                <h5><b>Bölge</b></h5>
+                                <p> Yükünüzü hangi bölgeye göndermek istersiniz  ? <span class=" ml-1 cursor-pointer"> Oku</span> </p>
+                            </div>
+                        </div>
+                        <div class="radio-group row justify-content-between px-3 text-center a">
+                            <div class="col-auto mr-sm-2 mx-1 card-block py-0 text-center radio  ">
+                                <div class="flex-row">
+                                    <!-- <div class="col">
+                                        <div class="pic"></div>
+                                     
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="col-auto ml-sm-2 mx-1 card-block py-0 text-center radio ">
+                                <div class="flex-row">
+                                    <!-- <div class="col">
+                                    <div class="pic">  </div>
+                                        
+                                      
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <br class="col">
+                            <div class="col-auto"> <button type="button" class="btn btn-outline-secondary"> Türkiye <span class="mr-2"><i class="fa fa-angle-left" aria-hidden="true"></i></span> </button> </div>
+
+                            <label for="cars">----></label>
+
+                            <select name="cars" id="cars">
+                              <option value="volvo">Almanya</option>
+                              <option value="saab">Avusturya</option>
+                              <option value="mercedes">Hollanda</option>
+                              <option value="audi">Fransa</option>
+                            </select>
+                            
+                        
+                            </div>
+                            <br>
+                            <input type="text" class="ip4" id="son"> 
+                        </div>
+                        <div class="row justify-content-between">
+                            <div class="col-auto"> <button type="button" class="btn btn-outline-secondary" onclick="window.location='/Users/zgr/Desktop/Nav/index.html';"> <span class="mr-2"><i class="fa fa-angle-left" aria-hidden="true"></i></span> </button> </div>
+                            <div class="col-auto"> <button type="button" class="btn btn-primary"  onclick="deneme1();">Hesap <span class="ml-2"><i class="fa fa-angle-right" aria-hidden="true"></i></span> </button> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script>
+    (document).ready(function () {
+    ('.radio-group .radio').click(function () {
+    ('.selected .fa').removeClass('fa-check');
+    ('.radio').removeClass('selected');
+    (this).addClass('selected');
+    });
+    });
+    </script>
+</body>
+
+
+</body>
+</html>

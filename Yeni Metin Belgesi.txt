@@ -1,0 +1,9 @@
+ if(cboxes==1)
+            {document.getElementById('son').value = s1*s2*s3/5000;}
+            else
+            {document.getElementById('son').value = s1*s2*s3/0;}
+
+
+
+var cboxes = document.getElementById('paket');
+            checked = (cboxes.checked?'1':'0');
